@@ -1,0 +1,320 @@
+import { EquipmentItem } from "@/types";
+
+export const equipmentCategories = [
+  { id: "all", name: "All Equipment", slug: "all" },
+  { id: "cranes", name: "Mobile Cranes", slug: "crane-rental-services" },
+  { id: "crawlers", name: "Crawler Cranes", slug: "crawler-crane-rental" },
+  { id: "boomlifts", name: "Boom Lifts", slug: "boom-lift-rental-services" },
+  { id: "truckmounted-boomlift", name: "Truck-Mounted Boom Lifts", slug: "truck-mounted-boom-lift-rental" },
+  { id: "pick-and-carry", name: "Pick & Carry Cranes", slug: "pick-and-carry-mobile-crane-rental" },
+  { id: "scissor-lifts", name: "Scissor Lifts", slug: "scissor-lift-rental-services" },
+  { id: "trailers", name: "Heavy Trailers", slug: "heavy-duty-trailer-rental" },
+  { id: "forklifts", name: "Forklifts", slug: "forklift-rental-services" },
+] as const;
+
+export const equipmentFleet: EquipmentItem[] = [
+  {
+    id: "heavy-telescopic-mobile-cranes",
+    slug: "crane-rental-services",
+    name: "Mobile Cranes",
+    category: "cranes",
+    categoryName: "Mobile Cranes",
+    shortDescription:
+      "Best crane services in Vizag and throughout India. High-capacity hydraulic telescopic mobile cranes (50T to 300T) for bridge girders, factory steel erection, and heavy industrial lifts with 24/7 site dispatch.",
+    fullDescription:
+      "Our fleet of heavy telescopic and all-terrain mobile cranes provides certified lifting solutions from 50 Ton to 300 Ton. Designed for fast road travel and rapid setup on project sites, these cranes are ideal for highway flyovers, refinery maintenance, metro rail erection, and heavy structural placement in Visakhapatnam and all over India.",
+    imageUrl: "/images/fleet/mobile-cranes.jpg",
+    imageAlt: "Mobile Cranes for rent in Vizag and India - 50T to 300T Telescopic Hydraulic Cranes",
+    popularModels: ["50-Ton Telescopic Crane", "80-Ton All-Terrain Crane", "100-Ton Mobile Crane", "150T – 300T Heavy Lift"],
+    specs: [
+      { label: "Lifting Capacity", value: "50 Ton – 300 Ton" },
+      { label: "Max Boom Reach", value: "Up to 80 meters + Jib" },
+      { label: "Ideal For", value: "Bridge girders & heavy steel erection" },
+      { label: "Service Area", value: "Visakhapatnam (Vizag) & Pan-India" },
+    ],
+    applications: [
+      "Highway flyover girder launching and bridge erection",
+      "Industrial factory structural steel installation",
+      "Petrochemical refinery turnaround maintenance",
+      "Heavy container and port cargo offloading in Vizag",
+    ],
+    keyFeatures: [
+      "Digital Safe Load Indicator (SLI) with auto safety cutoff",
+      "Multi-axle chassis for fast highway mobilization",
+      "Certified heavy crane operators and riggers included",
+      "24/7 on-site maintenance support",
+    ],
+    rentalTerms: [
+      "Daily shift, weekly shutdown, or monthly lease contracts",
+      "Supplied with verified third-party load test certifications (TPI)",
+      "Fast dispatch across Andhra Pradesh, Telangana, and Pan-India",
+    ],
+    featured: true,
+  },
+  {
+    id: "heavy-hydraulic-crawler-cranes",
+    slug: "crawler-crane-rental",
+    name: "Crawler Cranes",
+    category: "crawlers",
+    categoryName: "Crawler Cranes",
+    shortDescription:
+      "Heavy lattice boom crawler cranes (50T to 500T) with wide tracks for deep foundation piling, marine jetties, and long-term project sites.",
+    fullDescription:
+      "Engineered for massive stability on soft and uneven construction ground, our lattice boom crawler cranes deliver 50 Ton to 500 Ton lifting capacities. Featuring true pick-and-carry mobility while traveling under load, they are the first choice for port harbors, thermal power plants, bridge foundations, and mega industrial construction.",
+    imageUrl: "/images/fleet/crawler-cranes.jpg",
+    imageAlt: "Crawler Cranes for rent in Visakhapatnam and India - Heavy lattice boom crawler cranes",
+    popularModels: ["50T Crawler Crane", "75T Lattice Boom Crawler", "100T Heavy Lift Crawler", "150T – 500T Super Heavy Crawler"],
+    specs: [
+      { label: "Lifting Capacity", value: "50 Ton – 500 Ton" },
+      { label: "Boom Type", value: "Heavy lattice boom & luffing jib" },
+      { label: "Mobility", value: "Pick & carry on wide crawler tracks" },
+      { label: "Ideal For", value: "Marine piling & power plant construction" },
+    ],
+    applications: [
+      "Port harbor, marine jetty, and breakwater piling",
+      "Thermal and nuclear power plant structural setup",
+      "Bridge pier construction and heavy girder positioning",
+      "Windmill assembly and mega factory framework",
+    ],
+    keyFeatures: [
+      "Low ground pressure for working on soft or coastal terrain",
+      "True pick-and-carry capability with heavy rated load",
+      "Customizable boom length for varied project radiuses",
+      "Supplied with experienced crawler operators and riggers",
+    ],
+    rentalTerms: [
+      "Monthly and yearly infrastructure project contracts",
+      "Includes complete site assembly and load testing",
+      "24/7 technical assistance team",
+    ],
+    featured: true,
+  },
+  {
+    id: "articulated-telescopic-boom-lifts",
+    slug: "boom-lift-rental-services",
+    name: "Boom Lifts",
+    category: "boomlifts",
+    categoryName: "Boom Lifts",
+    shortDescription:
+      "Premier services of boomlift in India and best boomlift services in Vizag. Self-propelled articulated & telescopic manlifts (45ft to 150ft) for safe high-altitude industrial maintenance & construction.",
+    fullDescription:
+      "Recognized as the premier provider for the best boomlifts services in India and Vizag (Visakhapatnam), our modern fleet of self-propelled knuckle boom lifts and straight telescopic manlifts reaches working heights from 45 feet up to 150 feet (14m to 46m). Designed for zero-risk high-elevation factory maintenance, painting, piping, and structural inspections.",
+    imageUrl: "/images/fleet/boom-lifts.jpg",
+    imageAlt: "Best boomlifts services in India and Vizag - Articulated and Telescopic Boom Lifts for rent",
+    popularModels: ["45ft Articulated Boom Lift", "60ft Diesel Telescopic Manlift", "80ft High-Reach Boom Lift", "120ft – 150ft Ultra Boom Lift"],
+    specs: [
+      { label: "Working Height", value: "45 ft – 150 ft (14m – 46m)" },
+      { label: "Basket Capacity", value: "230 kg – 450 kg (2-3 Persons)" },
+      { label: "Power Options", value: "4WD Diesel / Battery Electric" },
+      { label: "Ideal For", value: "Factory maintenance, piping & painting" },
+    ],
+    applications: [
+      "Industrial plant maintenance, piping, and cable tray fitting",
+      "Factory structural steel painting and roof repairs",
+      "Commercial building glass facade and cladding installation",
+      "Refinery shutdown turnaround inspections",
+    ],
+    keyFeatures: [
+      "4-Wheel Drive with rough-terrain tires for muddy sites",
+      "Jib rotation and self-leveling basket for pinpoint positioning",
+      "Emergency descent valves and platform tilt alarms",
+      "Available with certified platform operators or dry hire",
+    ],
+    rentalTerms: [
+      "Daily shift, weekly, monthly, and yearly rental options",
+      "Supplied with third-party fitness & safety certificates",
+      "Immediate dispatch across Visakhapatnam & Pan-India",
+    ],
+    featured: true,
+  },
+  {
+    id: "truck-mounted-boom-lifts",
+    slug: "truck-mounted-boom-lift-rental",
+    name: "Truck-Mounted Boom Lifts",
+    category: "truckmounted-boomlift",
+    categoryName: "Truck-Mounted Boom Lifts",
+    shortDescription:
+      "Premier truck-mounted boom lift rental in India & best sky lift services in Vizag. Road-legal sky lifts (18m to 70m height) for quick streetlighting, transmission line repairs, and industrial facade access.",
+    fullDescription:
+      "Mounted directly on heavy-duty commercial truck chassis, our truck-mounted boom lifts and sky lifts drive straight to your job site with no separate transport trailer needed. Setting up in minutes with hydraulic outriggers, they reach working heights from 18 meters to 70 meters for municipal, utility, and industrial high-reach tasks in Vizag, Andhra Pradesh, and throughout Indian industrial corridors.",
+    imageUrl: "/images/fleet/truck-mounted-boomlifts.jpg",
+    imageAlt: "Truck-Mounted Boom Lifts and Sky Lifts for rent in Vizag Visakhapatnam India",
+    popularModels: ["18m Truck-Mounted Sky Lift", "28m Articulated Truck Boom", "45m High-Reach Sky Lift", "70m Heavy Aerial Platform"],
+    specs: [
+      { label: "Working Height", value: "18 meters – 70 meters" },
+      { label: "Setup Time", value: "Under 5 minutes with outriggers" },
+      { label: "Chassis", value: "Road-legal BharatBenz / Tata chassis" },
+      { label: "Ideal For", value: "Streetlights, power lines & facade cleaning" },
+    ],
+    applications: [
+      "High-voltage electrical power transmission repairs",
+      "Highway overhead signage and LED streetlight maintenance",
+      "High-rise building glass cleaning and exterior repairs",
+      "Industrial flare stack and chimney inspections across India",
+    ],
+    keyFeatures: [
+      "Fast road transit allowing multiple project site visits per day",
+      "Automatic computerized self-leveling hydraulic outriggers",
+      "Dual controls from ground station and platform basket",
+      "Supplied with licensed commercial driver-operator",
+    ],
+    rentalTerms: [
+      "Hourly shift, daily hire, or monthly rental contracts",
+      "Immediate local dispatch across Visakhapatnam and AP",
+      "Full third-party safety inspection certificates included",
+    ],
+    featured: true,
+  },
+  {
+    id: "pick-and-carry-hydra-farana-cranes",
+    slug: "pick-and-carry-mobile-crane-rental",
+    name: "Pick & Carry Cranes",
+    category: "pick-and-carry",
+    categoryName: "Pick & Carry Cranes",
+    shortDescription:
+      "Top-rated pick and carry crane rental in India & best hydra crane services in Vizag. Agile Farana & Hydra mobile cranes (12T to 30T) for yard loading, machinery shifting, and PEB steel erection.",
+    fullDescription:
+      "The undisputed workhorses of Indian construction yards and industrial plants. Our 12-Ton to 30-Ton Pick & Carry mobile cranes (Hydra and Next-Gen Farana cranes) feature 360-degree job-site maneuverability and 4-section telescopic booms for unloading trailers, moving steel fabrications, and placing equipment across Visakhapatnam, Andhra Pradesh, and all Indian manufacturing zones.",
+    imageUrl: "/images/fleet/pick-and-carry-cranes.jpg",
+    imageAlt: "Pick and Carry Mobile Cranes Farana Hydra Crane rental in Vizag and India",
+    popularModels: ["Farana Pick & Carry 14T / 20T", "Hydra 12T / 15T Crane", "Next-Gen Farana 25T / 30T", "Rough-Terrain Hydra"],
+    specs: [
+      { label: "Lifting Capacity", value: "12 Ton – 30 Ton" },
+      { label: "Boom Reach", value: "15 m – 24 m (Telescopic)" },
+      { label: "Steering", value: "Articulated power steering" },
+      { label: "Ideal For", value: "Factory loading & PEB steel erection" },
+    ],
+    applications: [
+      "Unloading machinery and heavy crates from trailers",
+      "Pre-Engineered Building (PEB) structural steel erection",
+      "Fabrication yard material shifting and staging",
+      "Port container terminal logistics in Visakhapatnam & Pan-India",
+    ],
+    keyFeatures: [
+      "Compact turning radius for crowded plant sheds and yards",
+      "Hydraulic winch with anti-two-block safety sensors",
+      "Self-driven road mobility for fast transit between sites",
+      "Experienced licensed operators and rigging support",
+    ],
+    rentalTerms: [
+      "Available on single-shift, daily, or monthly hire",
+      "Wet hire (with fuel) or Dry hire packages",
+      "Pre-dispatch third-party safety test certificate included",
+    ],
+    featured: true,
+  },
+  {
+    id: "electric-diesel-scissor-lifts",
+    slug: "scissor-lift-rental-services",
+    name: "Scissor Lifts",
+    category: "scissor-lifts",
+    categoryName: "Scissor Lifts",
+    shortDescription:
+      "Best scissor lift rental services in India & Vizag. Electric indoor scissor lifts & 4WD rough-terrain diesel lifts (19ft to 60ft) with wide platforms for warehouse and factory ceiling work.",
+    fullDescription:
+      "Built with wide working platforms and slide-out deck extensions, our electric and diesel scissor lifts allow multiple technicians and heavy tools to safely access heights from 19 feet to 60 feet. Perfect for warehouse racking, electrical busbar fitting, HVAC ducting, and factory ceiling maintenance across India & Vizag industrial areas.",
+    imageUrl: "/images/fleet/scissor-lifts.jpg",
+    imageAlt: "Electric and Diesel Scissor Lifts for rent in Vizag and India - 19ft to 60ft platforms",
+    popularModels: ["19ft Electric Indoor Scissor Lift", "32ft Narrow Electric Lift", "40ft Rough-Terrain 4WD Scissor", "53ft – 60ft Diesel Platform"],
+    specs: [
+      { label: "Working Height", value: "19 ft – 60 ft (6m – 18m)" },
+      { label: "Platform Capacity", value: "230 kg – 1,000 kg" },
+      { label: "Power Type", value: "Zero-Emission Battery / Diesel" },
+      { label: "Ideal For", value: "Warehouse ducting, ceilings & electrical" },
+    ],
+    applications: [
+      "Warehouse storage racking and electrical wiring",
+      "HVAC air duct and fire sprinkler pipe installations",
+      "Commercial building ceiling drywall and lighting setup",
+      "Factory shutdown conveyor maintenance across Indian plants",
+    ],
+    keyFeatures: [
+      "Spacious slide-out extension deck for extra outreach",
+      "Non-marking tires safe for polished indoor warehouse floors",
+      "Automatic pothole protection and platform tilt alarms",
+      "Zero-emission battery electric drive for indoor facilities",
+    ],
+    rentalTerms: [
+      "Daily, weekly, monthly, and yearly rental packages",
+      "Includes operator training and on-site maintenance support",
+      "Immediate delivery across Visakhapatnam and India",
+    ],
+    featured: true,
+  },
+  {
+    id: "heavy-haulage-trailers",
+    slug: "heavy-duty-trailer-rental",
+    name: "Trailers",
+    category: "trailers",
+    categoryName: "Heavy Trailers",
+    shortDescription:
+      "All-India heavy trailer rental services. Heavy-duty low bed, semi-low bed, and hydraulic multi-axle trailers (30T to 250T) for transporting heavy construction machinery across India.",
+    fullDescription:
+      "Safely transport heavy cranes, crawler excavators, piling rigs, industrial transformers, and over-dimensional cargo (ODC) with our heavy trailer rental fleet. Operating out of Visakhapatnam and serving industrial routes across all Indian states, our low-bed and multi-axle trailers provide turnkey loading, transit route clearance, and on-time delivery.",
+    imageUrl: "/images/fleet/trailers.jpg",
+    imageAlt: "Heavy haulage low bed trailers and multi-axle trailers for rent in Vizag and India",
+    popularModels: ["30T – 50T Low Bed Trailer", "Semi-Low Bed Machinery Carrier", "40ft Flatbed Transport Trailer", "Hydraulic Multi-Axle Modular Trailer (100T – 250T)"],
+    specs: [
+      { label: "Payload Capacity", value: "30 Ton – 250+ Ton ODC" },
+      { label: "Trailer Types", value: "Low Bed, Semi-Low Bed & Multi-Axle" },
+      { label: "Deck Height", value: "Ultra-low deck for bridge clearance" },
+      { label: "Ideal For", value: "Machinery transit & Over-Dimensional Cargo" },
+    ],
+    applications: [
+      "Transporting heavy cranes, excavators, and piling rigs",
+      "Over-Dimensional Cargo (ODC) for power and refinery projects",
+      "Windmill blade, nacelle, and tower segment transit",
+      "Port container and breakbulk cargo logistics across Indian ports",
+    ],
+    keyFeatures: [
+      "Hydraulic ramps for smooth drive-on loading of machinery",
+      "Ultra-low ground clearance ensuring safe bridge transit",
+      "Route survey, pilot escorts, and road permit handling included",
+      "GPS real-time tracking with experienced heavy drivers",
+    ],
+    rentalTerms: [
+      "Single-trip machinery mobilization or monthly dedicated fleet",
+      "Turnkey loading, lashing, and unloading support",
+      "Comprehensive transit insurance and compliance",
+    ],
+    featured: true,
+  },
+  {
+    id: "industrial-diesel-electric-forklifts",
+    slug: "forklift-rental-services",
+    name: "Forklifts",
+    category: "forklifts",
+    categoryName: "Forklifts",
+    shortDescription:
+      "Best industrial forklift rental services in India & Vizag. Counterbalance diesel and battery electric forklifts (3 Ton to 25 Ton) for warehouse pallet racking and container stuffing.",
+    fullDescription:
+      "Move palletized raw materials, steel coils, shipping containers, and factory equipment efficiently with our heavy forklift rental fleet in Visakhapatnam and all Indian industrial corridors. Available from 3 Ton up to 25 Ton capacity, fitted with container masts and hydraulic side-shifters.",
+    imageUrl: "/images/fleet/forklifts.jpg",
+    imageAlt: "Industrial Diesel and Electric Forklifts for rent in Vizag Visakhapatnam India",
+    popularModels: ["3T / 5T Diesel Forklift", "3T Electric Warehouse Forklift", "10T Heavy Industrial Forklift", "16T – 25T Container Forklift"],
+    specs: [
+      { label: "Lifting Capacity", value: "3 Ton – 25 Ton" },
+      { label: "Lift Height", value: "Up to 7.5 m (Container Mast)" },
+      { label: "Power Train", value: "Low-Emission Diesel / Electric AC" },
+      { label: "Ideal For", value: "Warehouse pallets & container loading" },
+    ],
+    applications: [
+      "Warehouse raw materials and finished goods movement",
+      "Shipping container stuffing and destuffing at logistics hubs",
+      "Steel plant coil, billet, and plate material loading",
+      "Port CFS container freight station pallet handling in Vizag & India",
+    ],
+    keyFeatures: [
+      "Compact turning radius for narrow warehouse aisles",
+      "Hydraulic side-shifter for precision fork positioning",
+      "Panoramic mast design offering high driver visibility",
+      "Supplied with licensed drivers or on dry lease",
+    ],
+    rentalTerms: [
+      "Daily shift, monthly contracts, and multi-year warehouse leases",
+      "Prompt on-site maintenance and spare parts support",
+      "Certified with annual load test and fitness certificates",
+    ],
+    featured: true,
+  },
+];

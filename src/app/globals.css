@@ -1,0 +1,387 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --brand-navy-dark: #0A1322;
+    --brand-navy: #0F1D33;
+    --brand-navy-card: #152744;
+    --brand-navy-surface: #1C3358;
+    --brand-navy-border: rgba(255, 255, 255, 0.1);
+    
+    --brand-orange: #EE6C25;
+    --brand-orange-hover: #D85915;
+    --brand-orange-light: #F48A4E;
+    --brand-orange-glow: rgba(238, 108, 37, 0.25);
+    
+    --text-primary: #FFFFFF;
+    --text-secondary: #CBD5E1;
+    --text-muted: #94A3B8;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--brand-navy-dark);
+    color: var(--text-primary);
+    font-family: var(--font-inter, system-ui, -apple-system, sans-serif);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Custom high-contrast navy/orange scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0A1322;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1C3358;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #EE6C25;
+  }
+
+  ::selection {
+    background-color: #EE6C25;
+    color: #FFFFFF;
+  }
+}
+
+/* Enable custom luxury precision cursor on desktop pointer devices while preserving native caret on inputs */
+@media (pointer: fine) {
+  body, a, button, [role="button"], .industrial-card {
+    cursor: none !important;
+  }
+  input, select, textarea, [contenteditable="true"] {
+    cursor: text !important;
+  }
+}
+
+/* Industrial decorative grid in navy/orange tone */
+.industrial-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}
+
+.industrial-grid-dense {
+  background-size: 20px 20px;
+  background-image: 
+    linear-gradient(to right, rgba(238, 108, 37, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(238, 108, 37, 0.06) 1px, transparent 1px);
+}
+
+.hazard-stripe-orange {
+  background: repeating-linear-gradient(
+    -45deg,
+    #EE6C25,
+    #EE6C25 12px,
+    #152744 12px,
+    #152744 24px
+  );
+}
+
+/* Text Gradients */
+.text-gradient-orange {
+  background: linear-gradient(135deg, #F97316 0%, #EE6C25 50%, #EA580C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-silver {
+  background: linear-gradient(180deg, #FFFFFF 0%, #E2E8F0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Navy & Steel Glass Card Surfaces */
+.industrial-card {
+  background: linear-gradient(180deg, rgba(21, 39, 68, 0.9) 0%, rgba(15, 29, 51, 0.95) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px -10px rgba(7, 14, 26, 0.6);
+  backdrop-filter: blur(14px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.industrial-card:hover {
+  border-color: rgba(238, 108, 37, 0.5);
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px -15px rgba(238, 108, 37, 0.2);
+}
+
+/* Button System: Brand Orange & Deep Navy */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #EE6C25;
+  color: #FFFFFF;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  border: 1px solid #F48A4E;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 14px rgba(238, 108, 37, 0.35);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background-color: #D85915;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(238, 108, 37, 0.5);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.06);
+  color: #F8FAFC;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background-color: #1C3358;
+  border-color: rgba(238, 108, 37, 0.5);
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #25D366;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-whatsapp:hover {
+  background-color: #20BA5A;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+}
+
+/* Animations & Effects */
+@keyframes textShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes marqueeLeft {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-33.3333%, 0, 0);
+  }
+}
+
+@keyframes marqueeRight {
+  0% {
+    transform: translate3d(-33.3333%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes marqueeClients {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee-clients {
+  display: flex;
+  width: max-content;
+  animation: marqueeClients 50s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-clients:hover {
+  animation-play-state: paused;
+}
+
+.animate-marquee-left {
+  animation: marqueeLeft 30s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-right {
+  animation: marqueeRight 30s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-left:hover,
+.animate-marquee-right:hover {
+  animation-play-state: paused;
+}
+
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    #FFFFFF 0%,
+    #EE6C25 25%,
+    #F48A4E 50%,
+    #FFFFFF 75%,
+    #EE6C25 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShimmer 5s linear infinite;
+}
+
+/* Scroll Triggered Reveal Classes */
+.reveal-fade-up {
+  opacity: 0;
+  transform: translate3d(0, 30px, 0);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-scale-in {
+  opacity: 0;
+  transform: scale(0.94) translate3d(0, 20px, 0);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.revealed {
+  opacity: 1 !important;
+  transform: translate3d(0, 0, 0) scale(1) !important;
+}
+
+/* Stagger delay helpers */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+
+/* Animated Glowing Borders & Sheen Effects */
+@keyframes buttonGleam {
+  0% { transform: translateX(-150%) skewX(-20deg); }
+  35%, 100% { transform: translateX(250%) skewX(-20deg); }
+}
+
+.animate-gleam {
+  animation: buttonGleam 4s ease-in-out infinite;
+}
+
+@keyframes borderGlowPulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.02);
+  }
+}
+
+.animate-border-glow {
+  animation: borderGlowPulse 4s ease-in-out infinite;
+}
+
+@keyframes laserSweep {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-laser {
+  animation: laserSweep 3.5s ease-in-out infinite;
+}
+
+@keyframes cursorRipple {
+  0% {
+    transform: scale(0.65);
+    opacity: 0.85;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+.animate-cursor-ripple {
+  animation: cursorRipple 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
